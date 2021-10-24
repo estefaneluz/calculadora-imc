@@ -28,7 +28,7 @@ public class Login implements IcontroleCalculadora{
             HttpSession sessao = req.getSession();
             
             sessao.setAttribute("usuarioLogado", usuario);
-            return "redirect:entrada?txtAcao=Calculadora";
+            return "redirect:entrada?txtAcao=FormCalculadora";
         } else {
             return "redirect:entrada?txtAcao=FormLogin";
         }

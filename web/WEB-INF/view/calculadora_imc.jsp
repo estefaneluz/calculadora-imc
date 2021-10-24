@@ -22,11 +22,23 @@
             </br>
             
             <label>Altura (em metros)</label></br> 
-            <input type="text" name="txtAltura" placeholder="ex: 1.58"/>
+            <input type="text" name="txtAltura" placeholder="ex: 1.75"/>
             </br> 
             </br>
             
             <input type="submit" name="btnCalcular" value="Calcular"/>
         </form>
+            
+        <p>
+            <fmt:formatNumber 
+                maxFractionDigits="2" 
+                var="imcFmt" 
+                value="${imc.calcular()}" 
+            />
+            ${imcFmt}
+        </p>
+        <p>
+            ${imc.classificacao()}
+        </p>
     </body>
 </html>
